@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Kimi Web Bridge
-// @namespace    https://github.com/your-username/kimi-web-proxy
+// @namespace    https://github.com/SternI/kimi-web-proxy
 // @version      1.0.0
 // @description  Automates kimi.ai bridge for local OpenAI-compatible proxy
 // @match        https://www.kimi.ai/*
