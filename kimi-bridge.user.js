@@ -4,6 +4,7 @@
 // @version      1.0.0
 // @description  Automates kimi.ai bridge for local OpenAI-compatible proxy
 // @match        https://www.kimi.ai/*
+// @match        https://www.kimi.chat/*
 // @match        https://kimi.moonshot.cn/*
 // @grant        GM_xmlhttpRequest
 // @grant        unsafeWindow
@@ -31,6 +32,7 @@
 
   const RECONNECT_INTERVAL_MS = 3_000;
   const POLL_INTERVAL_MS = 250;
+  const JOB_TIMEOUT_MS = 3_600_000;
 
   let ws = null;
   let isConnected = false;
@@ -123,7 +125,7 @@
         url,
         data: data ? JSON.stringify(data) : undefined,
         headers: { "Content-Type": "application/json" },
-        timeout: 35000,
+        timeout: JOB_TIMEOUT_MS,
         onload: (res) => {
           try {
             resolve(JSON.parse(res.responseText));

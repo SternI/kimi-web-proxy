@@ -36,7 +36,7 @@ log = logging.getLogger("kimi-proxy")
 
 DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 1340
-JOB_TIMEOUT = 300  # seconds
+JOB_TIMEOUT = 3600  # seconds
 HISTORY_TAIL = 20
 MAX_PROMPT_CHARS = 48000
 ARG_CHUNK_SIZE = 128
